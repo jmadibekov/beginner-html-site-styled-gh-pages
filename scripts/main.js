@@ -1,17 +1,10 @@
-const myHeading = document.querySelector('h1');
-myHeading.textContent = 'Hello world!';
+let myImage = document.querySelector('img');
 
-let myVariable;
-myVariable = "Bob";
-console.log('This is console: ' + myVariable);
-
-function multiply(num1, num2) {
-    let result = num1 * num2;
-    return result;
-}
-
-console.log('4 * 7 is ' + multiply(4, 7));
-
-document.querySelector('html').onclick = function() {
-    alert('Ouch! Stop poking me!');
+myImage.onclick = function() {
+    let mySrc = myImage.getAttribute('src');
+    if (mySrc === 'images/firefox-icon.png') {
+        myImage.setAttribute('src', 'images/firefox.png');
+    } else {
+        myImage.setAttribute('src', 'images/firefox-icon.png');
+    }
 }
